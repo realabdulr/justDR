@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "OnlyDR",
+  "name": "DA DR Checker: Fast, Free Forever",
   "version": "1.0",
-  "description": "Displays Ahrefs Domain Rating (DR) right in the extension icon.",
+  "description": "Free domain authority checker alternative to Moz DA Checker. Instant website DR check using Ahrefs API.",
   "permissions": [
     "storage",
     "tabs"
