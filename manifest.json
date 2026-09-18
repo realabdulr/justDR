@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "OnlyDR",
+  "version": "1.0",
+  "description": "Displays Ahrefs Domain Rating (DR) right in the extension icon.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.ahrefs.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "OnlyDR - Domain Rating"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/search*",
+        "*://*.google.co.uk/search*",
+        "*://*.google.ca/search*",
+        "*://*.google.com.au/search*",
+        "*://*.google.co.in/search*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
